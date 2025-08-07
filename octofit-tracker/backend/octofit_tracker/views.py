@@ -37,4 +37,15 @@ class UserDetailView(APIView):
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+class ApiRootView(APIView):
+    def get(self, request):
+        base_url = "https://cautious-doodle-5vv5qv74wpv25rq-8000.app.github.dev/"
+        return Response({
+            'users': base_url + 'api/users/',
+            'teams': base_url + 'api/teams/',
+            'activities': base_url + 'api/activities/',
+            'leaderboard': base_url + 'api/leaderboard/',
+            'workouts': base_url + 'api/workouts/'
+        })
+
 # Similar views for Team, Activity, Leaderboard, and Workout can be added here.
