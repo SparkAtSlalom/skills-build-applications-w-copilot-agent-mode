@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import UserListView, UserDetailView, TeamListView, TeamDetailView, ActivityListView, ActivityDetailView, LeaderboardListView, LeaderboardDetailView, WorkoutListView, WorkoutDetailView, api_root
+from octofit_tracker.views import UserListView, UserDetailView, TeamListView, TeamDetailView, ActivityListView, ActivityDetailView, LeaderboardListView, LeaderboardDetailView, WorkoutListView, WorkoutDetailView, api_root
 
 urlpatterns = [
     path('', api_root, name='api-root'),
